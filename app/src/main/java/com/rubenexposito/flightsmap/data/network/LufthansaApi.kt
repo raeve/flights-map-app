@@ -1,6 +1,7 @@
 package com.rubenexposito.flightsmap.data.network
 
 import com.rubenexposito.flightsmap.data.dto.OAuthTokenDto
+import com.rubenexposito.flightsmap.data.dto.OperationsSchedulesDto
 import com.rubenexposito.flightsmap.data.dto.ReferencesAirportDto
 import io.reactivex.Single
 import retrofit2.http.*
@@ -16,10 +17,15 @@ interface LufthansaApi {
     ): Single<OAuthTokenDto>
 
     @GET("references/airports")
-    fun referencesAirports(@Header("Authorization") authorization: String,
-                           @Header("Accept") accept: String = "application/json",
-                           @Query("limit") limit: Int,
+    fun referencesAirports(@Query("limit") limit: Int,
                            @Query("offset") offset: Int,
                            @Query("LHoperated") lhOperated: Boolean = true
     ): Single<ReferencesAirportDto>
+
+    @GET("operations/schedules/{fromCode}/{toCode}/{date}")
+    fun operationsSchedules(@Path("fromCode") fromCode: String,
+                            @Path("toCode") toCode: String,
+                            @Path("date") date: String,
+                            @Query("directFlights") directFlights: Boolean = true
+    ): Single<OperationsSchedulesDto>
 }

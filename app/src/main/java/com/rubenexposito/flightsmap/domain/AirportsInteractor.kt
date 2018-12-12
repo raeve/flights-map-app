@@ -12,12 +12,8 @@ interface AirportsInteractor {
 
 class AirportsInteractorImpl(
     private val lufthansaRepository: LufthansaRepository,
-    private val sharedRepository: SharedRepository,
     private val airportMapper: AirportMapper
 ) : AirportsInteractor {
-    override fun getAirports(limit: Int, offset: Int) = lufthansaRepository.referencesAirport(
-            sharedRepository.getToken(),
-        limit,
-        offset
-    ).map { airportMapper.convertReferenceAirportDtoToAirportList(it) }
+    override fun getAirports(limit: Int, offset: Int) = lufthansaRepository.referencesAirport(limit, offset)
+            .map { airportMapper.convertReferenceAirportDtoToAirportList(it) }
 }

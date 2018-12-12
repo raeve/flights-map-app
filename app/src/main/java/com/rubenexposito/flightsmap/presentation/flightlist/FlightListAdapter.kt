@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.item_airport.view.*
 
 class FlightListAdapter(private val listener: ItemListener) : RecyclerView.Adapter<AirportViewHolder>() {
     var airportList: MutableList<Airport> = ArrayList()
+    var scheduleList: MutableList<>
 
     var from = true
 

@@ -35,9 +35,14 @@ abstract class FlightListModule {
         @Provides
         @PerActivity
         @JvmStatic
-        fun provideAirportsInteractor(lufthansaRepository: LufthansaRepository,
-                                      sharedRepository: SharedRepository) : AirportsInteractor
-                = AirportsInteractorImpl(lufthansaRepository, sharedRepository, AirportMapper())
+        fun provideAirportsInteractor(lufthansaRepository: LufthansaRepository) : AirportsInteractor
+                = AirportsInteractorImpl(lufthansaRepository, AirportMapper())
+
+        @Provides
+        @PerActivity
+        @JvmStatic
+        fun provideSchedulesInteractor(lufthansaRepository: LufthansaRepository) : AirportsInteractor
+                = AirportsInteractorImpl(lufthansaRepository, AirportMapper())
 
         @Provides
         @PerActivity
