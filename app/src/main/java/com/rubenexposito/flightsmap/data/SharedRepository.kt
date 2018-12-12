@@ -5,19 +5,21 @@ import android.content.SharedPreferences
 import java.util.*
 
 interface SharedRepository {
-    fun saveToken(token: String, tokenType: String, expiresIn: Long)
+    fun saveToken(token: String, tokenType: String, expiresIn: Long) : Boolean
     fun expiredToken(): Boolean
     fun getToken(): String
 }
 
 class SharedRepositoryImpl(private val context: Context) : SharedRepository {
-    override fun saveToken(token: String, tokenType: String, expiresIn: Long) {
+    override fun saveToken(token: String, tokenType: String, expiresIn: Long): Boolean {
         with(getPreferences().edit()) {
             putString(KEY_TOKEN, token)
             putString(KEY_TOKEN_TYPE, tokenType)
             putLong(KEY_EXPIRES_IN, Calendar.getInstance().timeInMillis + (expiresIn * 1000))
             apply()
         }
+
+        return getToken() == token
     }
 
     override fun expiredToken(): Boolean = getPreferences().getLong(KEY_EXPIRES_IN, 0) < Calendar.getInstance().timeInMillis

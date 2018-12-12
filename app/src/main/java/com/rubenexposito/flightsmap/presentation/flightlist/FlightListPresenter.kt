@@ -1,14 +1,17 @@
 package com.rubenexposito.flightsmap.presentation.flightlist
 
 import com.rubenexposito.flightsmap.Navigator
+import com.rubenexposito.flightsmap.R
 import com.rubenexposito.flightsmap.domain.AirportsInteractor
+import com.rubenexposito.flightsmap.domain.OAuthInteractor
 import io.reactivex.Scheduler
 import io.reactivex.disposables.Disposables
 import io.reactivex.rxkotlin.subscribeBy
 
 class FlightListPresenter(
     private val view: FlightListContract.View,
-    private val interactor: AirportsInteractor,
+    private val oAuthInteractor: OAuthInteractor,
+    private val airportsInteractor: AirportsInteractor,
     private val navigator: Navigator,
     private val observeOn: Scheduler,
     private val subscribeOn: Scheduler
@@ -19,18 +22,25 @@ class FlightListPresenter(
     private var airportsOffset = 0
 
     override fun onCreate() {
-        requestAirports(true)
+        requestToken()
     }
 
     override fun onPause() {
         subscription.dispose()
     }
 
-    private fun requestAirports(reset: Boolean) {
-        interactor.getAirports(PARAM_LIMIT, airportsOffset)
+    private fun requestToken() {
+        subscription = oAuthInteractor.getAuthToken()
             .observeOn(observeOn)
             .subscribeOn(subscribeOn)
-            .subscribeBy({view.showError()}, {view.showAirports(reset)})
+            .subscribeBy({view.showError(R.string.error_token_not_updated)}, {if (it) requestAirports(false) else view.showError(R.string.error_token_not_updated)})
+    }
+
+    private fun requestAirports(reset: Boolean) {
+        subscription = airportsInteractor.getAirports(PARAM_LIMIT, airportsOffset)
+            .observeOn(observeOn)
+            .subscribeOn(subscribeOn)
+            .subscribeBy({view.showError(R.string.error_airports_not_retrieved)}, {view.showAirports(reset)})
     }
 
     companion object {

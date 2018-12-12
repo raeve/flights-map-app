@@ -16,10 +16,10 @@ import javax.inject.Named
 class NetworkModule {
 
     @Provides
-    fun provideLufthansaRepository(): LufthansaRepository =
-        LufthansaRepositoryImpl(RetrofitAdapter.retrofit.create(LufthansaApi::class.java))
+    fun provideLufthansaRepository(sharedRepository: SharedRepository): LufthansaRepository =
+        LufthansaRepositoryImpl(RetrofitAdapter(sharedRepository).retrofit.create(LufthansaApi::class.java))
 
     @Provides
-    fun provideOAuthInteractor(lufthansaRepository: LufthansaRepository, sharedRepository: SharedRepository, @Named("observeOn") observeOn: Scheduler, @Named("subscribeOn") subscribeOn: Scheduler) : OAuthInteractor
-            = OAuthInteractorImpl(lufthansaRepository, sharedRepository, observeOn, subscribeOn)
+    fun provideOAuthInteractor(lufthansaRepository: LufthansaRepository, sharedRepository: SharedRepository) : OAuthInteractor
+            = OAuthInteractorImpl(lufthansaRepository, sharedRepository)
 }

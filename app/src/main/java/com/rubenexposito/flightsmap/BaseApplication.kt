@@ -15,9 +15,6 @@ class BaseApplication : Application(), HasActivityInjector {
     @Inject
     lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
-    @Inject
-    lateinit var interactor: OAuthInteractor
-
     lateinit var component: AppComponent
 
     override fun activityInjector(): AndroidInjector<Activity> = activityInjector
@@ -25,7 +22,6 @@ class BaseApplication : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
         initDagger()
-        initAuth()
     }
 
     private fun initDagger() {
@@ -35,9 +31,5 @@ class BaseApplication : Application(), HasActivityInjector {
                 .build()
 
         component.inject(this)
-    }
-
-    private fun initAuth() {
-        interactor.getAuthToken()
     }
 }

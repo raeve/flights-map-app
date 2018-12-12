@@ -7,6 +7,7 @@ import com.rubenexposito.flightsmap.data.SharedRepository
 import com.rubenexposito.flightsmap.di.PerActivity
 import com.rubenexposito.flightsmap.domain.AirportsInteractor
 import com.rubenexposito.flightsmap.domain.AirportsInteractorImpl
+import com.rubenexposito.flightsmap.domain.OAuthInteractor
 import com.rubenexposito.flightsmap.domain.mapper.AirportMapper
 import com.rubenexposito.flightsmap.presentation.flightlist.FlightListActivity
 import com.rubenexposito.flightsmap.presentation.flightlist.FlightListContract
@@ -42,11 +43,12 @@ abstract class FlightListModule {
         @PerActivity
         @JvmStatic
         fun providePresenter(
-                view: FlightListContract.View,
-                interactor: AirportsInteractor,
-                navigator: Navigator, @Named("observeOn") observeOn: Scheduler, @Named("subscribeOn") subscribeOn: Scheduler
+            view: FlightListContract.View,
+            oAuthInteractor: OAuthInteractor,
+            airportsInteractor: AirportsInteractor,
+            navigator: Navigator, @Named("observeOn") observeOn: Scheduler, @Named("subscribeOn") subscribeOn: Scheduler
         ): FlightListContract.Presenter = FlightListPresenter(
-                view, interactor, navigator, observeOn, subscribeOn
+                view, oAuthInteractor, airportsInteractor, navigator, observeOn, subscribeOn
         )
     }
 }

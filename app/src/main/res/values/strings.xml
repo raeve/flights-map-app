@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Flights Map</string>
     <string name="error_unexpected">Unexpected error</string>
+    <string name="error_token_not_updated">We could not retrieve your token from API. Please review your credentials
+    </string>
+    <string name="error_airports_not_retrieved">We could not retrieve the airports. Please review your network.</string>
 </resources>

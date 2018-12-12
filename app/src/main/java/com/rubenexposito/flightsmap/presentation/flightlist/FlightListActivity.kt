@@ -1,6 +1,7 @@
 package com.rubenexposito.flightsmap.presentation.flightlist
 
 import android.os.Bundle
+import android.support.annotation.StringRes
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.rubenexposito.flightsmap.R
@@ -32,7 +33,7 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
 
     }
 
-    override fun showError() {
-        Toast.makeText(this, R.string.error_unexpected, Toast.LENGTH_SHORT).show()
+    override fun showError(@StringRes resId: Int) {
+        Toast.makeText(this, resId, Toast.LENGTH_SHORT).show()
     }
 }
