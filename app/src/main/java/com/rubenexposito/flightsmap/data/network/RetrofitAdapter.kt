@@ -1,5 +1,6 @@
 package com.rubenexposito.flightsmap.data.network
 
+import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.rubenexposito.flightsmap.data.SharedRepository
 import okhttp3.OkHttpClient
@@ -38,7 +39,7 @@ class RetrofitAdapter(sharedRepository: SharedRepository) {
             .baseUrl(NetworkConfig.API_URL)
             .client(client)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().registerTypeAdapterFactory(ArrayAdapterFactory()).create()))
             .build()
     }
 }

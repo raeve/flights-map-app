@@ -15,7 +15,7 @@ data class AirportDto(
     @SerializedName("CountryCode") val countryCode: String,
     @SerializedName("LocationType") val locationType: String,
     @SerializedName("Names") val namesDto: NamesDto,
-    @SerializedName("UtcOffset") val utcOffset: Int,
+    @SerializedName("UtcOffset") val utcOffset: Double,
     @SerializedName("TimeZoneId") val timeZoneId: String
 )
 

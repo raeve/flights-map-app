@@ -34,14 +34,42 @@ class FlightListPresenter(
         subscription = oAuthInteractor.getAuthToken()
                 .observeOn(observeOn)
                 .subscribeOn(subscribeOn)
-                .subscribeBy({ view.showError(R.string.error_token_not_updated) }, { if (!it) view.showError(R.string.error_token_not_updated) else view.onPrepared() })
+                .subscribeBy(
+                        {
+                            view.showError(R.string.error_token_not_updated)
+                        },
+                        {
+                            if (!it) view.showError(R.string.error_token_not_updated) else view.onPrepared()
+                        })
     }
 
-    override fun requestAirports(from: Boolean) {
+    override fun requestAirports(from: Boolean, reset: Boolean) {
+        if(reset) airportsOffset = 0
+
         subscription = airportsInteractor.getAirports(PARAM_LIMIT, airportsOffset)
                 .observeOn(observeOn)
                 .subscribeOn(subscribeOn)
-                .subscribeBy({ view.showError(R.string.error_airports_not_retrieved) }, { view.showAirports(it, from) })
+                .subscribeBy(
+                        { view.showError(R.string.error_airports_not_retrieved) },
+                        {
+                            airportsOffset += PARAM_LIMIT
+                            view.showAirports(it, from)
+                        })
+    }
+
+    override fun requestMoreAirports() {
+
+        subscription = airportsInteractor.getAirports(PARAM_LIMIT, airportsOffset)
+                .observeOn(observeOn)
+                .subscribeOn(subscribeOn)
+                .subscribeBy(
+                        {
+                            view.showError(R.string.error_airports_not_retrieved)
+                        },
+                        {
+                            airportsOffset += PARAM_LIMIT
+                            view.addAirports(it)
+                        })
     }
 
     override fun onAirportSelected(airport: Airport, from: Boolean) {
