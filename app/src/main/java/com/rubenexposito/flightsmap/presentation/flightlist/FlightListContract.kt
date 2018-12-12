@@ -1,16 +1,20 @@
 package com.rubenexposito.flightsmap.presentation.flightlist
 
 import android.support.annotation.StringRes
+import com.rubenexposito.flightsmap.domain.model.Airport
 
 interface FlightListContract {
     interface  View {
-        fun showAirports(reset: Boolean)
-        fun showFlights(reset: Boolean)
+        fun onPrepared()
+        fun showAirports(airportList: List<Airport>, from: Boolean)
         fun showError(@StringRes resId: Int)
+        fun updateAirportTo(text: String)
+        fun updateAirportFrom(text: String)
     }
 
-    interface Presenter {
+    interface Presenter : ItemListener {
         fun onCreate()
         fun onPause()
+        fun requestAirports(from: Boolean)
     }
 }
