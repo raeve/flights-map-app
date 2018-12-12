@@ -2,6 +2,12 @@ package com.rubenexposito.flightsmap.di
 
 import android.content.Context
 import com.rubenexposito.flightsmap.BaseApplication
+import com.rubenexposito.flightsmap.data.LufthansaRepository
+import com.rubenexposito.flightsmap.data.SharedRepository
+import com.rubenexposito.flightsmap.data.SharedRepositoryImpl
+import com.rubenexposito.flightsmap.domain.AirportsInteractorImpl
+import com.rubenexposito.flightsmap.domain.OAuthInteractorImpl
+import com.rubenexposito.flightsmap.domain.mapper.AirportMapper
 import com.rubenexposito.flightsmap.presentation.flightlist.di.FlightListSubComponent
 import dagger.Module
 import dagger.Provides
@@ -18,6 +24,9 @@ class AppModule {
 
     @Provides
     fun context(application: BaseApplication): Context = application.applicationContext
+
+    @Provides
+    fun provideSharedRepository(context: Context) : SharedRepository = SharedRepositoryImpl(context)
 
     @Provides
     @Named("observeOn")

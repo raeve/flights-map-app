@@ -19,6 +19,7 @@ class FlightListPresenter(
     private var airportsOffset = 0
 
     override fun onCreate() {
+        requestAirports(true)
     }
 
     override fun onPause() {
