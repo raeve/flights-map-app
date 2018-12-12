@@ -1,0 +1,644 @@
+{
+    "ScheduleResource": {
+        "Schedule": [{
+            "TotalJourney": {
+                "Duration": "PT1H10M"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T06:55"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T08:05"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 5771
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX"
+                },
+                "Equipment": {
+                    "AircraftCode": 320
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 1346,
+                    "DatePeriod": {
+                        "Effective": "2018-12-08",
+                        "Expiration": "2019-01-02"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H5M"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T08:05"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T09:10"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 1183
+                },
+                "Equipment": {
+                    "AircraftCode": 319
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 34,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-13"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H5M"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T09:30"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T10:35"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 1185
+                },
+                "Equipment": {
+                    "AircraftCode": 320
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 136,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-17"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H5M"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T11:15"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T12:20"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 1187
+                },
+                "Equipment": {
+                    "AircraftCode": 321
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 1234567,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-19"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H5M"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T12:15"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T13:20"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 5775
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX"
+                },
+                "Equipment": {
+                    "AircraftCode": "CS1"
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 123457,
+                    "DatePeriod": {
+                        "Effective": "2018-12-06",
+                        "Expiration": "2019-01-06"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T14:40"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T15:40"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 1191
+                },
+                "Equipment": {
+                    "AircraftCode": 321
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 137,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-17"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H5M"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T15:45"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T16:50"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 5777
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX"
+                },
+                "Equipment": {
+                    "AircraftCode": "CS3"
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 3,
+                    "DatePeriod": {
+                        "Effective": "2018-12-05",
+                        "Expiration": "2018-12-12"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T18:05"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T19:05"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 1197
+                },
+                "Equipment": {
+                    "AircraftCode": 321
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 34,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-19"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H10M"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T19:00"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T20:10"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 5779
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX"
+                },
+                "Equipment": {
+                    "AircraftCode": 321
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 123457,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-19"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT1H"
+            },
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T19:55"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T20:55"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 1199
+                },
+                "Equipment": {
+                    "AircraftCode": 319
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 3,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-19"
+                    }
+                }
+            }
+        }, {
+            "TotalJourney": {
+                "Duration": "PT4H50M"
+            },
+            "Flight": [{
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T07:05"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "STR",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T07:50"
+                    },
+                    "Terminal": {
+                        "Name": 2
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LX",
+                    "FlightNumber": 1164
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "OS"
+                },
+                "Equipment": {
+                    "AircraftCode": "DH4"
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 34,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-13"
+                    }
+                }
+            }, {
+                "Departure": {
+                    "AirportCode": "STR",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T11:05"
+                    },
+                    "Terminal": {
+                        "Name": 2
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T11:55"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 133
+                },
+                "Equipment": {
+                    "AircraftCode": "32A"
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 34,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-13"
+                    }
+                }
+            }]
+        }, {
+            "TotalJourney": {
+                "Duration": "PT4H50M"
+            },
+            "Flight": [{
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T07:05"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "STR",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T07:50"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 5823
+                },
+                "Equipment": {
+                    "AircraftCode": "DH4"
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 34,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-13"
+                    }
+                }
+            }, {
+                "Departure": {
+                    "AirportCode": "STR",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T11:05"
+                    },
+                    "Terminal": {
+                        "Name": 2
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T11:55"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 133
+                },
+                "Equipment": {
+                    "AircraftCode": "32A"
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 34,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-13"
+                    }
+                }
+            }]
+        }, {
+            "TotalJourney": {
+                "Duration": "PT8H"
+            },
+            "Flight": [{
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T07:05"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "STR",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T07:50"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 5823
+                },
+                "Equipment": {
+                    "AircraftCode": "DH4"
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 123567,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-23"
+                    }
+                }
+            }, {
+                "Departure": {
+                    "AirportCode": "STR",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T14:15"
+                    },
+                    "Terminal": {
+                        "Name": 2
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "ScheduledTimeLocal": {
+                        "DateTime": "2018-12-12T15:05"
+                    },
+                    "Terminal": {
+                        "Name": 1
+                    }
+                },
+                "MarketingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": 135
+                },
+                "Equipment": {
+                    "AircraftCode": 319
+                },
+                "Details": {
+                    "Stops": {
+                        "StopQuantity": 0
+                    },
+                    "DaysOfOperation": 123567,
+                    "DatePeriod": {
+                        "Effective": "2018-12-12",
+                        "Expiration": "2018-12-23"
+                    }
+                }
+            }]
+        }],
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [{
+                "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/ZRH\/FRA\/2018-12-12?directFlights=0",
+                "@Rel": "self"
+            }, {
+                "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/ZRH\/FRA\/2018-12-11?directFlights=0&offset=0&limit=20",
+                "@Rel": "previousRange"
+            }, {
+                "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/ZRH\/FRA\/2018-12-12?directFlights=0&offset=20&limit=20",
+                "@Rel": "next"
+            }, {
+                "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/ZRH\/FRA\/2018-12-13T19:55?directFlights=0&offset=0&limit=20",
+                "@Rel": "nextRange"
+            }, {
+                "@Href": "https:\/\/api.lufthansa.com\/v1\/references\/airports\/{airportCode}",
+                "@Rel": "related"
+            }, {
+                "@Href": "https:\/\/api.lufthansa.com\/v1\/references\/aircraft\/{aircraftCode}",
+                "@Rel": "related"
+            }]
+        }
+    }
+}
