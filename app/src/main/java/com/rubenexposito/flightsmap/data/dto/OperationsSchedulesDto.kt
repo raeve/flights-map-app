@@ -23,7 +23,7 @@ data class DepartureArrivalDto(@SerializedName("AirportCode") val airportCode: S
 
 data class ScheduledTimeLocalDto(@SerializedName("DateTime") val dateTime: String)
 
-data class TerminalDto(@SerializedName("Name") val name: Int)
+data class TerminalDto(@SerializedName("Name") val name: Any)
 
 data class MarketingCarrierDto(@SerializedName("AirlineID") val airlineId: String,
                                @SerializedName("FlightNumber") val flightNumber: Int)

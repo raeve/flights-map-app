@@ -5,9 +5,7 @@ import com.rubenexposito.flightsmap.Navigator
 import com.rubenexposito.flightsmap.data.LufthansaRepository
 import com.rubenexposito.flightsmap.data.SharedRepository
 import com.rubenexposito.flightsmap.di.PerActivity
-import com.rubenexposito.flightsmap.domain.AirportsInteractor
-import com.rubenexposito.flightsmap.domain.AirportsInteractorImpl
-import com.rubenexposito.flightsmap.domain.OAuthInteractor
+import com.rubenexposito.flightsmap.domain.*
 import com.rubenexposito.flightsmap.domain.mapper.AirportMapper
 import com.rubenexposito.flightsmap.presentation.flightlist.FlightListActivity
 import com.rubenexposito.flightsmap.presentation.flightlist.FlightListContract
@@ -41,8 +39,8 @@ abstract class FlightListModule {
         @Provides
         @PerActivity
         @JvmStatic
-        fun provideSchedulesInteractor(lufthansaRepository: LufthansaRepository) : AirportsInteractor
-                = AirportsInteractorImpl(lufthansaRepository, AirportMapper())
+        fun provideSchedulesInteractor(lufthansaRepository: LufthansaRepository) : SchedulesInteractor
+                = SchedulesInteractorImpl(lufthansaRepository, AirportMapper())
 
         @Provides
         @PerActivity
@@ -51,9 +49,10 @@ abstract class FlightListModule {
             view: FlightListContract.View,
             oAuthInteractor: OAuthInteractor,
             airportsInteractor: AirportsInteractor,
+            schedulesInteractor: SchedulesInteractor,
             navigator: Navigator, @Named("observeOn") observeOn: Scheduler, @Named("subscribeOn") subscribeOn: Scheduler
         ): FlightListContract.Presenter = FlightListPresenter(
-                view, oAuthInteractor, airportsInteractor, navigator, observeOn, subscribeOn
+                view, oAuthInteractor, airportsInteractor, schedulesInteractor, navigator, observeOn, subscribeOn
         )
     }
 }

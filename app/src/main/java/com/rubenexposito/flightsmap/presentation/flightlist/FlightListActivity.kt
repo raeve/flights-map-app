@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.widget.Toast
 import com.rubenexposito.flightsmap.R
 import com.rubenexposito.flightsmap.domain.model.Airport
+import com.rubenexposito.flightsmap.domain.model.Schedule
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_flight_list.*
 import javax.inject.Inject
@@ -38,6 +39,7 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
     override fun showAirports(airportList: List<Airport>, from: Boolean) {
         with(rvItems.adapter as FlightListAdapter) {
             this.from = from
+            this.scheduleList.clear()
             this.airportList = airportList.toMutableList()
             notifyDataSetChanged()
         }
@@ -47,6 +49,12 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
         val positionStart = itemCount
         addAirports(airportList)
         notifyItemRangeInserted(positionStart, airportList.size)
+    }
+
+    override fun showSchedules(scheduleList: List<Schedule>) = with(rvItems.adapter as FlightListAdapter) {
+        this.airportList.clear()
+        this.scheduleList = scheduleList.toMutableList()
+        notifyDataSetChanged()
     }
 
     override fun showError(@StringRes resId: Int) = Toast.makeText(this, resId, Toast.LENGTH_SHORT).show()

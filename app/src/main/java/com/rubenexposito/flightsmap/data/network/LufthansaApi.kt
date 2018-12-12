@@ -26,6 +26,6 @@ interface LufthansaApi {
     fun operationsSchedules(@Path("fromCode") fromCode: String,
                             @Path("toCode") toCode: String,
                             @Path("date") date: String,
-                            @Query("directFlights") directFlights: Boolean = true
+                            @Query("directFlights") directFlights: Boolean = false
     ): Single<OperationsSchedulesDto>
 }

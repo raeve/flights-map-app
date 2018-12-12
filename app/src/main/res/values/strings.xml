@@ -8,5 +8,6 @@
     <string name="flights_to">To: </string>
     <string name="flights_from_select">Select your airport of origin</string>
     <string name="flights_to_select">Select your airport of destination</string>
+    <string name="error_schedules_not_found">We could not found schedules</string>
 
 </resources>
