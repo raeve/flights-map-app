@@ -52,6 +52,7 @@ class FlightListPresenter(
     override fun requestAirports(from: Boolean, reset: Boolean) {
         if(reset) airportsOffset = 0
 
+        view.showLoading()
         subscription = airportsInteractor.getAirports(PARAM_LIMIT, airportsOffset)
                 .observeOn(observeOn)
                 .subscribeOn(subscribeOn)
@@ -60,6 +61,7 @@ class FlightListPresenter(
                         {
                             airportsOffset += PARAM_LIMIT
                             view.showAirports(it, from)
+                            view.hideLoading()
                         })
     }
 
@@ -78,15 +80,20 @@ class FlightListPresenter(
     }
 
     override fun requestSchedules() {
+        view.showLoading()
+        view.clearAirports()
+
         subscription = schedulesInteractor.getSchedules(airportCodeFrom, airportCodeTo, Date().toDateTime())
                 .observeOn(observeOn)
                 .subscribeOn(subscribeOn)
                 .subscribeBy (
                         {
                             view.showError(R.string.error_schedules_not_found)
+                            view.hideLoading()
                         },
                         {
                             view.showSchedules(it)
+                            view.hideLoading()
                         })
     }
 
@@ -100,8 +107,10 @@ class FlightListPresenter(
             view.updateAirportTo(text)
         }
 
-        if(airportCodeFrom.isNotEmpty() && airportCodeTo.isNotEmpty()) {
-            requestSchedules()
+        when {
+            airportCodeTo.isEmpty() -> view.selectAirportTo()
+            airportCodeFrom.isEmpty() -> view.selectAirportFrom()
+            else -> requestSchedules()
         }
     }
 

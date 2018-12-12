@@ -1,22 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:padding="16dp"
+    android:gravity="center"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvFlightDuration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/llDeparture"
+        android:layout_width="0dp"
+        android:layout_weight="0.33"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvDeparture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDepartureHour"
+            tools:text="04:30"
+            style="@style/TextHour" />
 
-    <TextView
-        android:id="@+id/tvArrival"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDeparture"
+            tools:text="BCN"
+            style="@style/TextAirportCode" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFlight"
+        android:layout_width="0dp"
+        android:layout_weight="0.33"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvFlightDuration"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            tools:text="19h 30min"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="4dp"
+            android:background="@color/black"
+            android:layout_width="48dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/tvFlightStops"
+            android:textSize="10sp"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            tools:text="2 stops"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llArrival"
+        android:layout_width="0dp"
+        android:layout_weight="0.33"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvArrivalHour"
+            tools:text="06:30"
+            style="@style/TextHour" />
+
+        <TextView
+            android:id="@+id/tvArrival"
+            style="@style/TextAirportCode"
+            tools:text="DME"/>
+
+    </LinearLayout>
 
 </LinearLayout>

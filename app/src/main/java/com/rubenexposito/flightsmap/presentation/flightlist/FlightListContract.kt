@@ -6,12 +6,20 @@ import com.rubenexposito.flightsmap.domain.model.Schedule
 
 interface FlightListContract {
     interface  View {
+        fun showError(@StringRes resId: Int)
+        fun showLoading()
+        fun hideLoading()
+
         fun onPrepared()
+        fun clearAirports()
         fun showAirports(airportList: List<Airport>, from: Boolean)
         fun addAirports(airportList: List<Airport>)
-        fun showError(@StringRes resId: Int)
-        fun updateAirportTo(text: String)
+
+        fun selectAirportFrom()
+        fun selectAirportTo()
         fun updateAirportFrom(text: String)
+        fun updateAirportTo(text: String)
+
         fun showSchedules(scheduleList: List<Schedule>)
     }
 

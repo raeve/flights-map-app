@@ -8,10 +8,13 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.Toast
 import com.rubenexposito.flightsmap.R
+import com.rubenexposito.flightsmap.data.common.hide
+import com.rubenexposito.flightsmap.data.common.show
 import com.rubenexposito.flightsmap.domain.model.Airport
 import com.rubenexposito.flightsmap.domain.model.Schedule
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_flight_list.*
+import kotlinx.android.synthetic.main.view_progress.*
 import javax.inject.Inject
 
 class FlightListActivity : AppCompatActivity(), FlightListContract.View {
@@ -36,6 +39,15 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
         super.onPause()
     }
 
+    override fun clearAirports() {
+        with(rvItems.adapter as FlightListAdapter) {
+            this.airportList.clear()
+            this.scheduleList.clear()
+            notifyDataSetChanged()
+        }
+        rvItems.show()
+    }
+
     override fun showAirports(airportList: List<Airport>, from: Boolean) {
         with(rvItems.adapter as FlightListAdapter) {
             this.from = from
@@ -43,6 +55,7 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
             this.airportList = airportList.toMutableList()
             notifyDataSetChanged()
         }
+        rvItems.show()
     }
 
     override fun addAirports(airportList: List<Airport>) = with(rvItems.adapter as FlightListAdapter) {
@@ -51,13 +64,25 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
         notifyItemRangeInserted(positionStart, airportList.size)
     }
 
-    override fun showSchedules(scheduleList: List<Schedule>) = with(rvItems.adapter as FlightListAdapter) {
-        this.airportList.clear()
-        this.scheduleList = scheduleList.toMutableList()
-        notifyDataSetChanged()
+    override fun showSchedules(scheduleList: List<Schedule>) {
+        with(rvItems.adapter as FlightListAdapter) {
+            this.airportList.clear()
+            this.scheduleList = scheduleList.toMutableList()
+            notifyDataSetChanged()
+        }
+        rvItems.show()
     }
 
     override fun showError(@StringRes resId: Int) = Toast.makeText(this, resId, Toast.LENGTH_SHORT).show()
+
+    override fun showLoading() {
+        rvItems.hide()
+        progressView.show()
+    }
+
+    override fun hideLoading() {
+        progressView.hide()
+    }
 
 
     override fun updateAirportTo(text: String) = with(tvTo) {
@@ -72,19 +97,26 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
             setTextColor(getColor(R.color.black))
             typeface = Typeface.DEFAULT
         }
-        tvTo.callOnClick()
+    }
+
+    override fun selectAirportFrom() {
+        tvFrom.setTextColor(getColor(R.color.colorPrimaryDark))
+        tvFrom.typeface = Typeface.DEFAULT_BOLD
+        presenter.requestAirports(true, true)
+    }
+
+    override fun selectAirportTo() {
+        tvTo.setTextColor(getColor(R.color.colorPrimaryDark))
+        tvTo.typeface = Typeface.DEFAULT_BOLD
+        presenter.requestAirports(false, true)
     }
 
     private fun initView() {
         tvFrom.setOnClickListener {
-            tvFrom.setTextColor(getColor(R.color.colorPrimaryDark))
-            tvFrom.typeface = Typeface.DEFAULT_BOLD
-            presenter.requestAirports(true, true)
+            selectAirportFrom()
         }
         tvTo.setOnClickListener {
-            tvTo.setTextColor(getColor(R.color.colorPrimaryDark))
-            tvTo.typeface = Typeface.DEFAULT_BOLD
-            presenter.requestAirports(false, true)
+            selectAirportTo()
         }
 
         with(rvItems) {
@@ -92,10 +124,10 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
             adapter = FlightListAdapter(presenter)
             setHasFixedSize(true)
 
-            addOnScrollListener(object: RecyclerView.OnScrollListener(){
+            addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     val linearLayoutManager = recyclerView.layoutManager as LinearLayoutManager
-                    if(linearLayoutManager.findLastCompletelyVisibleItemPosition() == linearLayoutManager.itemCount - 1){
+                    if (linearLayoutManager.findLastCompletelyVisibleItemPosition() == linearLayoutManager.itemCount - 1) {
                         presenter.requestMoreAirports()
                     }
 

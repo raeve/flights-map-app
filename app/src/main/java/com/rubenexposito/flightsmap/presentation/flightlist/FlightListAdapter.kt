@@ -67,9 +67,13 @@ class AirportViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 class ScheduleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(item: Schedule) = with(itemView) {
         tvFlightDuration.text = item.duration
-        val departure = "${item.flights[0].departure.airportCode}-${item.flights[0].departure.date}"
-        tvDeparture.text = departure
-        val arrival = "${item.flights[0].arrival.airportCode}-${item.flights[0].arrival.date}"
-        tvArrival.text = arrival
+        tvFlightStops.text = if (item.flights.size == 1) context.getString(R.string.flight_direct) else context.getString(R.string.flight_stops, item.flights.size - 1)
+
+        tvDepartureHour.text = item.flights[0].departure.date
+        tvDeparture.text = item.flights[0].departure.airportCode
+
+
+        tvArrivalHour.text = item.flights[item.flights.size - 1].arrival.date
+        tvArrival.text = item.flights[item.flights.size - 1].arrival.airportCode
     }
 }
