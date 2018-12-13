@@ -11,5 +11,6 @@
     <string name="error_schedules_not_found">We could not found schedules</string>
     <string name="flight_direct">Direct</string>
     <string name="flight_stops">%1$d stops</string>
+    <string name="error_empty_list">We couldn\'t find schedules. Try with another combination</string>
 
 </resources>

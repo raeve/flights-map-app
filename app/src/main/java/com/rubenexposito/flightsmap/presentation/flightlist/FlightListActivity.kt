@@ -14,6 +14,7 @@ import com.rubenexposito.flightsmap.domain.model.Airport
 import com.rubenexposito.flightsmap.domain.model.Schedule
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_flight_list.*
+import kotlinx.android.synthetic.main.view_empty.*
 import kotlinx.android.synthetic.main.view_progress.*
 import javax.inject.Inject
 
@@ -77,11 +78,16 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
 
     override fun showLoading() {
         rvItems.hide()
+        emptyView.hide()
         progressView.show()
     }
 
     override fun hideLoading() {
         progressView.hide()
+    }
+
+    override fun showEmpty() {
+        emptyView.show()
     }
 
 
@@ -102,13 +108,13 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
     override fun selectAirportFrom() {
         tvFrom.setTextColor(getColor(R.color.colorPrimaryDark))
         tvFrom.typeface = Typeface.DEFAULT_BOLD
-        presenter.requestAirports(true, true)
+        presenter.requestAirports(true)
     }
 
     override fun selectAirportTo() {
         tvTo.setTextColor(getColor(R.color.colorPrimaryDark))
         tvTo.typeface = Typeface.DEFAULT_BOLD
-        presenter.requestAirports(false, true)
+        presenter.requestAirports(false)
     }
 
     private fun initView() {
@@ -127,7 +133,8 @@ class FlightListActivity : AppCompatActivity(), FlightListContract.View {
             addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     val linearLayoutManager = recyclerView.layoutManager as LinearLayoutManager
-                    if (linearLayoutManager.findLastCompletelyVisibleItemPosition() == linearLayoutManager.itemCount - 1) {
+                    val adapter = recyclerView.adapter as FlightListAdapter
+                    if (linearLayoutManager.findLastCompletelyVisibleItemPosition() == linearLayoutManager.itemCount - 1 && adapter.airportList.isNotEmpty()) {
                         presenter.requestMoreAirports()
                     }
 

@@ -21,12 +21,13 @@ interface FlightListContract {
         fun updateAirportTo(text: String)
 
         fun showSchedules(scheduleList: List<Schedule>)
+        fun showEmpty()
     }
 
     interface Presenter : ItemListener {
         fun onCreate()
         fun onPause()
-        fun requestAirports(from: Boolean, reset: Boolean)
+        fun requestAirports(from: Boolean)
         fun requestMoreAirports()
         fun requestSchedules()
     }
