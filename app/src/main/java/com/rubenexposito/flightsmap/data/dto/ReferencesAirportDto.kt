@@ -19,7 +19,7 @@ data class AirportDto(
     @SerializedName("TimeZoneId") val timeZoneId: String
 )
 
-data class PositionDto(@SerializedName("Coordinate") val coordinateDto: CoordinateDto)
+data class PositionDto(@SerializedName("Coordinate") val coordinateDto: CoordinateDto?)
 
 data class CoordinateDto(@SerializedName("Latitude") val latitude: Double, @SerializedName("Longitude") val longitude: Double)
 

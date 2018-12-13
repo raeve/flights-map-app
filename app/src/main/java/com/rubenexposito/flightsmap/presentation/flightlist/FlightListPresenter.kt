@@ -28,6 +28,8 @@ class FlightListPresenter(
     private var airportCodeTo = ""
     private var airportsOffset = 0
 
+    private var isLoading = false
+
     override fun onCreate() {
         requestToken()
     }
@@ -69,16 +71,22 @@ class FlightListPresenter(
     }
 
     override fun requestMoreAirports() {
-        subscription = airportsInteractor.getAirports(PARAM_LIMIT, airportsOffset)
+        if(!isLoading) {
+            isLoading = true
+            subscription = airportsInteractor.getAirports(PARAM_LIMIT, airportsOffset)
                 .observeOn(observeOn)
                 .subscribeOn(subscribeOn)
                 .subscribeBy(
-                        {
-                        },
-                        {
-                            airportsOffset += PARAM_LIMIT
-                            view.addAirports(it)
-                        })
+                    {
+                        isLoading = false
+                        view.showError(R.string.error_unexpected)
+                    },
+                    {
+                        isLoading = false
+                        airportsOffset += PARAM_LIMIT
+                        view.addAirports(it)
+                    })
+        }
     }
 
     override fun requestSchedules() {

@@ -20,13 +20,13 @@ interface LufthansaApi {
     fun referencesAirports(
         @Query("limit") limit: Int,
         @Query("offset") offset: Int,
-        @Query("LHoperated") lhOperated: Boolean = true
+        @Query("LHoperated") lhOperated: Boolean = false
     ): Single<ReferencesAirportDto>
 
     @GET("references/airports/{airportCode}")
     fun referencesAirports(
         @Path("airportCode") airportCode: String,
-        @Query("LHoperated") lhOperated: Boolean = true
+        @Query("LHoperated") lhOperated: Boolean = false
     ): Single<ReferencesAirportDto>
 
     @GET("operations/schedules/{fromCode}/{toCode}/{date}")

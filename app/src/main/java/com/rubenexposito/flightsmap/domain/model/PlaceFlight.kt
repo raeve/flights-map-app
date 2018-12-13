@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class PlaceFlight(val airportCode: String, val date: String) : Parcelable
+class PlaceFlight(val airportCode: String, val date: String, val city: String = "") : Parcelable

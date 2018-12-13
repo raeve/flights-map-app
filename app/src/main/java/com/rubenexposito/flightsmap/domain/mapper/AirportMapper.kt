@@ -12,7 +12,7 @@ import com.rubenexposito.flightsmap.domain.model.Schedule
 class AirportMapper {
 
     fun convertReferenceAirportDtoToAirportList(referencesAirportDto: ReferencesAirportDto): List<Airport> = referencesAirportDto.airportResource.airportsDto.listAirportDto.map {
-        Airport(it.airportCode, it.namesDto.listNameDto[0].alias, it.countryCode, it.positionDto.coordinateDto.latitude, it.positionDto.coordinateDto.longitude)
+        Airport(it.airportCode, it.namesDto.listNameDto[0].alias, it.countryCode, it.positionDto.coordinateDto?.latitude, it.positionDto.coordinateDto?.longitude)
     }
 
     fun convertOperationsScheduleToScheduleList(operationsSchedulesDto: OperationsSchedulesDto): List<Schedule> = operationsSchedulesDto.scheduleResource.scheduleList.map {

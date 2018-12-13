@@ -25,14 +25,14 @@ class MapInteractorImpl(
         }
 
     private fun directFlight(schedule: Schedule) = Single.zip(
-        createSingle(schedule.flights[0].departure.airportCode),
-        createSingle(schedule.flights[0].arrival.airportCode),
+        createSingle(schedule, schedule.flights[0].departure.airportCode),
+        createSingle(schedule, schedule.flights[0].arrival.airportCode),
         BiFunction<List<Airport>, List<Airport>, List<Airport>> { t1, t2 -> listOf(t1[0], t2[0]) })
 
     private fun oneStop(schedule: Schedule) = Single.zip(
-        createSingle(schedule.flights[0].departure.airportCode),
-        createSingle(schedule.flights[0].arrival.airportCode),
-        createSingle(schedule.flights[1].arrival.airportCode),
+        createSingle(schedule, schedule.flights[0].departure.airportCode),
+        createSingle(schedule, schedule.flights[0].arrival.airportCode),
+        createSingle(schedule, schedule.flights[1].arrival.airportCode),
         Function3<List<Airport>, List<Airport>, List<Airport>, List<Airport>> { t1, t2, t3 ->
             listOf(
                 t1[0],
@@ -43,10 +43,10 @@ class MapInteractorImpl(
 
 
     private fun twoStops(schedule: Schedule) = Single.zip(
-        createSingle(schedule.flights[0].departure.airportCode),
-        createSingle(schedule.flights[0].arrival.airportCode),
-        createSingle(schedule.flights[1].arrival.airportCode),
-        createSingle(schedule.flights[2].arrival.airportCode),
+        createSingle(schedule, schedule.flights[0].departure.airportCode),
+        createSingle(schedule, schedule.flights[0].arrival.airportCode),
+        createSingle(schedule, schedule.flights[1].arrival.airportCode),
+        createSingle(schedule, schedule.flights[2].arrival.airportCode),
         Function4<List<Airport>, List<Airport>, List<Airport>, List<Airport>, List<Airport>> { t1, t2, t3, t4 ->
             listOf(
                 t1[0],
@@ -56,7 +56,7 @@ class MapInteractorImpl(
             )
         })
 
-    private fun createSingle(airportCode: String) = lufthansaRepository.referencesAirport(airportCode).map {
+    private fun createSingle(schedule: Schedule, airportCode: String) = lufthansaRepository.referencesAirport(airportCode).map {
         airportMapper.convertReferenceAirportDtoToAirportList(it)
     }
 

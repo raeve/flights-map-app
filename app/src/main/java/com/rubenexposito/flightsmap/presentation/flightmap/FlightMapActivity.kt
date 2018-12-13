@@ -42,22 +42,32 @@ class FlightMapActivity : AppCompatActivity(), FlightMapContract.View, OnMapRead
         var index = 1
 
         for(airport in airports) {
-            val position = LatLng(airport.latitude, airport.longitude)
+            if(airport.latitude != null && airport.longitude != null) {
+                val position = LatLng(airport.latitude, airport.longitude)
 
-            if(index == 1) {
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(position))
+                if (index == 1) {
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(position))
+                }
+
+                val arriveCityTime = "${airport.city} ($$airport."
+                mMap.addMarker(MarkerOptions().position(position).title(airport.city))
+
+                if (index == airports.size) {
+                    break
+                }
+
+                val next = airports[index]
+                if(next.latitude != null && next.longitude != null) {
+                    val nextPosition = LatLng(next.latitude, next.longitude)
+
+                    mMap.addPolyline(
+                        PolylineOptions().add(
+                            position,
+                            nextPosition
+                        ).width(4f).color(getColor(R.color.colorPrimary))
+                    )
+                }
             }
-
-            mMap.addMarker(MarkerOptions().position(position).title(airport.city))
-
-            if(index == airports.size) {
-                break
-            }
-
-            val next = airports[index]
-            val nextPosition = LatLng(next.latitude, next.longitude)
-
-            mMap.addPolyline(PolylineOptions().add(position, nextPosition).width(4f).color(getColor(R.color.colorPrimary)))
             index++
         }
     }
