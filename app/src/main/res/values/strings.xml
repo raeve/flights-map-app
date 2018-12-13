@@ -1,16 +1,15 @@
 <resources>
     <string name="app_name">Flights Map</string>
     <string name="error_unexpected">Unexpected error</string>
-    <string name="error_token_not_updated">We could not retrieve your token from API. Please review your credentials
-    </string>
+    <string name="error_token_not_updated">We could not retrieve your token from API. Please review your credentials</string>
     <string name="error_airports_not_retrieved">We could not retrieve the airports. Please review your network.</string>
-    <string name="flights_from">From: </string>
-    <string name="flights_to">To: </string>
+    <string name="flights_from">From:</string>
+    <string name="flights_to">To:</string>
     <string name="flights_from_select">Select your airport of origin</string>
     <string name="flights_to_select">Select your airport of destination</string>
     <string name="error_schedules_not_found">We could not found schedules</string>
     <string name="flight_direct">Direct</string>
     <string name="flight_stops">%1$d stops</string>
     <string name="error_empty_list">We couldn\'t find schedules. Try with another combination</string>
-
+    <string name="title_activity_flight_maps">Map</string>
 </resources>

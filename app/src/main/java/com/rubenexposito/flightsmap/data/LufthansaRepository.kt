@@ -9,11 +9,13 @@ import io.reactivex.Single
 interface LufthansaRepository {
     fun oauthToken() : Single<OAuthTokenDto>
     fun referencesAirport(limit: Int, offset: Int) : Single<ReferencesAirportDto>
+    fun referencesAirport(airportCode: String) : Single<ReferencesAirportDto>
     fun operationsSchedules(fromCode: String, toCode: String, date: String) : Single<OperationsSchedulesDto>
 }
 
 class LufthansaRepositoryImpl(private val lufthansaApi: LufthansaApi) : LufthansaRepository {
     override fun oauthToken(): Single<OAuthTokenDto> = lufthansaApi.oauthToken()
     override fun referencesAirport(limit: Int, offset: Int): Single<ReferencesAirportDto> = lufthansaApi.referencesAirports(limit, offset)
+    override fun referencesAirport(airportCode: String): Single<ReferencesAirportDto> = lufthansaApi.referencesAirports(airportCode)
     override fun operationsSchedules(fromCode: String, toCode: String, date: String) = lufthansaApi.operationsSchedules(fromCode, toCode, date)
 }

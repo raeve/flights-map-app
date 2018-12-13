@@ -5,6 +5,7 @@ import com.rubenexposito.flightsmap.BaseApplication
 import com.rubenexposito.flightsmap.data.SharedRepository
 import com.rubenexposito.flightsmap.data.SharedRepositoryImpl
 import com.rubenexposito.flightsmap.presentation.flightlist.di.FlightListSubComponent
+import com.rubenexposito.flightsmap.presentation.flightmap.di.FlightMapSubComponent
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
@@ -14,7 +15,7 @@ import javax.inject.Named
 
 @Mockable
 @Module(
-    subcomponents = [FlightListSubComponent::class]
+    subcomponents = [FlightListSubComponent::class, FlightMapSubComponent::class]
 )
 class AppModule {
 
@@ -22,7 +23,7 @@ class AppModule {
     fun context(application: BaseApplication): Context = application.applicationContext
 
     @Provides
-    fun provideSharedRepository(context: Context) : SharedRepository = SharedRepositoryImpl(context)
+    fun provideSharedRepository(context: Context): SharedRepository = SharedRepositoryImpl(context)
 
     @Provides
     @Named("observeOn")
