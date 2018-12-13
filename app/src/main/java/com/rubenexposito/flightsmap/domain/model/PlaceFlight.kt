@@ -1,3 +1,7 @@
 package com.rubenexposito.flightsmap.domain.model
 
-class PlaceFlight(val airportCode: String, val date: String)
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+class PlaceFlight(val airportCode: String, val date: String) : Parcelable

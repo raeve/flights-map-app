@@ -34,11 +34,17 @@ abstract class FlightMapModule {
         @Provides
         @PerActivity
         @JvmStatic
+        fun provideMapInteractor(repository: LufthansaRepository): MapInteractor = MapInteractorImpl(repository, AirportMapper())
+
+        @Provides
+        @PerActivity
+        @JvmStatic
         fun providePresenter(
             view: FlightMapContract.View,
+            mapInteractor: MapInteractor,
             @Named("observeOn") observeOn: Scheduler, @Named("subscribeOn") subscribeOn: Scheduler
         ): FlightMapContract.Presenter = FlightMapPresenter(
-            view, observeOn, subscribeOn
+            view, mapInteractor, observeOn, subscribeOn
         )
     }
 }
