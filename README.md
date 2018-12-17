@@ -21,7 +21,7 @@ Also you need to create a project on Google Cloud and add your maps key in *goog
 * Asynchronous events with RxKotlin
 * Unit tests using Mockito
 * _(To do)_ UI tests with Espresso
-* Used [Lufthansa API](https://developer.lufthansa.com/docs) as network provider. Endpoints used **tv/popular** and **tv/{tv_id}/similar**
+* Used [Lufthansa API](https://developer.lufthansa.com/docs) as network provider. Endpoints used **oauth/token**, **references/airports** and **operations/schedules**
 
 
 ## Libraries
