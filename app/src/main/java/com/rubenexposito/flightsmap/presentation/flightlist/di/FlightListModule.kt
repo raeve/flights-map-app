@@ -3,10 +3,8 @@ package com.rubenexposito.flightsmap.presentation.flightlist.di
 import android.app.Activity
 import com.rubenexposito.flightsmap.Navigator
 import com.rubenexposito.flightsmap.data.LufthansaRepository
-import com.rubenexposito.flightsmap.data.SharedRepository
 import com.rubenexposito.flightsmap.di.PerActivity
 import com.rubenexposito.flightsmap.domain.*
-import com.rubenexposito.flightsmap.domain.mapper.AirportMapper
 import com.rubenexposito.flightsmap.presentation.flightlist.FlightListActivity
 import com.rubenexposito.flightsmap.presentation.flightlist.FlightListContract
 import com.rubenexposito.flightsmap.presentation.flightlist.FlightListPresenter
@@ -33,14 +31,14 @@ abstract class FlightListModule {
         @Provides
         @PerActivity
         @JvmStatic
-        fun provideAirportsInteractor(lufthansaRepository: LufthansaRepository) : AirportsInteractor
-                = AirportsInteractorImpl(lufthansaRepository, AirportMapper())
+        fun provideAirportsInteractor(lufthansaRepository: LufthansaRepository): AirportsInteractor =
+            AirportsInteractorImpl(lufthansaRepository)
 
         @Provides
         @PerActivity
         @JvmStatic
-        fun provideSchedulesInteractor(lufthansaRepository: LufthansaRepository) : SchedulesInteractor
-                = SchedulesInteractorImpl(lufthansaRepository, AirportMapper())
+        fun provideSchedulesInteractor(lufthansaRepository: LufthansaRepository): SchedulesInteractor =
+            SchedulesInteractorImpl(lufthansaRepository)
 
         @Provides
         @PerActivity
@@ -52,7 +50,7 @@ abstract class FlightListModule {
             schedulesInteractor: SchedulesInteractor,
             navigator: Navigator, @Named("observeOn") observeOn: Scheduler, @Named("subscribeOn") subscribeOn: Scheduler
         ): FlightListContract.Presenter = FlightListPresenter(
-                view, oAuthInteractor, airportsInteractor, schedulesInteractor, navigator, observeOn, subscribeOn
+            view, oAuthInteractor, airportsInteractor, schedulesInteractor, navigator, observeOn, subscribeOn
         )
     }
 }

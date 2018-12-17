@@ -4,7 +4,6 @@ import com.google.gson.Gson
 import com.nhaarman.mockito_kotlin.whenever
 import com.rubenexposito.flightsmap.data.LufthansaRepository
 import com.rubenexposito.flightsmap.data.dto.ReferencesAirportDto
-import com.rubenexposito.flightsmap.domain.mapper.AirportMapper
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import org.junit.Assert.assertNotNull
@@ -18,13 +17,10 @@ class AirportsInteractorImplTest : BaseInteractorTest() {
     @Mock
     lateinit var lufthansaRepository: LufthansaRepository
 
-    @Mock
-    lateinit var airportMapper: AirportMapper
-
     private lateinit var referencesAirportDto: ReferencesAirportDto
 
     private val interactor by lazy {
-        AirportsInteractorImpl(lufthansaRepository, airportMapper)
+        AirportsInteractorImpl(lufthansaRepository)
     }
 
     @Before

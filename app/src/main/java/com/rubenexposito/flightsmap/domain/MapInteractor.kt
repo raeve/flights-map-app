@@ -1,7 +1,7 @@
 package com.rubenexposito.flightsmap.domain
 
 import com.rubenexposito.flightsmap.data.LufthansaRepository
-import com.rubenexposito.flightsmap.domain.mapper.AirportMapper
+import com.rubenexposito.flightsmap.data.dto.ReferencesAirportDto
 import com.rubenexposito.flightsmap.domain.model.Airport
 import com.rubenexposito.flightsmap.domain.model.Schedule
 import io.reactivex.Single
@@ -14,8 +14,7 @@ interface MapInteractor {
 }
 
 class MapInteractorImpl(
-    private val lufthansaRepository: LufthansaRepository,
-    private val airportMapper: AirportMapper
+    private val lufthansaRepository: LufthansaRepository
 ) : MapInteractor {
     override fun getAirports(schedule: Schedule) =
         when (schedule.flights.size) {
@@ -56,8 +55,20 @@ class MapInteractorImpl(
             )
         })
 
-    private fun createSingle(schedule: Schedule, airportCode: String) = lufthansaRepository.referencesAirport(airportCode).map {
-        airportMapper.convertReferenceAirportDtoToAirportList(it)
-    }
+    private fun createSingle(schedule: Schedule, airportCode: String) =
+        lufthansaRepository.referencesAirport(airportCode).map {
+            convertReferenceAirportDtoToAirportList(it)
+        }
+
+    private fun convertReferenceAirportDtoToAirportList(referencesAirportDto: ReferencesAirportDto): List<Airport> =
+        referencesAirportDto.airportResource.airportsDto.listAirportDto.map {
+            Airport(
+                it.airportCode,
+                it.namesDto.listNameDto[0].alias,
+                it.countryCode,
+                it.positionDto.coordinateDto?.latitude,
+                it.positionDto.coordinateDto?.longitude
+            )
+        }
 
 }

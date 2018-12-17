@@ -1,4 +1,4 @@
-package com.rubenexposito.flightsmap.data.common
+package com.rubenexposito.flightsmap.common
 
 import java.text.SimpleDateFormat
 import java.util.*

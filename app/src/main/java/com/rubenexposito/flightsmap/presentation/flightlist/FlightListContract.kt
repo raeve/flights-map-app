@@ -29,6 +29,5 @@ interface FlightListContract {
         fun onPause()
         fun requestAirports(from: Boolean)
         fun requestMoreAirports()
-        fun requestSchedules()
     }
 }

@@ -1,13 +1,10 @@
 package com.rubenexposito.flightsmap.presentation.flightmap.di
 
 import android.app.Activity
-import com.rubenexposito.flightsmap.Navigator
 import com.rubenexposito.flightsmap.data.LufthansaRepository
 import com.rubenexposito.flightsmap.di.PerActivity
-import com.rubenexposito.flightsmap.domain.*
-import com.rubenexposito.flightsmap.domain.mapper.AirportMapper
-import com.rubenexposito.flightsmap.presentation.flightlist.FlightListContract
-import com.rubenexposito.flightsmap.presentation.flightlist.FlightListPresenter
+import com.rubenexposito.flightsmap.domain.MapInteractor
+import com.rubenexposito.flightsmap.domain.MapInteractorImpl
 import com.rubenexposito.flightsmap.presentation.flightmap.FlightMapActivity
 import com.rubenexposito.flightsmap.presentation.flightmap.FlightMapContract
 import com.rubenexposito.flightsmap.presentation.flightmap.FlightMapPresenter
@@ -34,7 +31,7 @@ abstract class FlightMapModule {
         @Provides
         @PerActivity
         @JvmStatic
-        fun provideMapInteractor(repository: LufthansaRepository): MapInteractor = MapInteractorImpl(repository, AirportMapper())
+        fun provideMapInteractor(repository: LufthansaRepository): MapInteractor = MapInteractorImpl(repository)
 
         @Provides
         @PerActivity

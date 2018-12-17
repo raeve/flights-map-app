@@ -2,7 +2,7 @@ package com.rubenexposito.flightsmap.presentation.flightlist
 
 import com.rubenexposito.flightsmap.Navigator
 import com.rubenexposito.flightsmap.R
-import com.rubenexposito.flightsmap.data.common.toDateTime
+import com.rubenexposito.flightsmap.common.toDateTime
 import com.rubenexposito.flightsmap.domain.AirportsInteractor
 import com.rubenexposito.flightsmap.domain.OAuthInteractor
 import com.rubenexposito.flightsmap.domain.SchedulesInteractor
@@ -22,10 +22,10 @@ class FlightListPresenter(
         private val observeOn: Scheduler,
         private val subscribeOn: Scheduler
 ) : FlightListContract.Presenter {
-    private var subscription = Disposables.empty()
+    internal var subscription = Disposables.empty()
 
-    private var airportCodeFrom = ""
-    private var airportCodeTo = ""
+    internal var airportCodeFrom = ""
+    internal var airportCodeTo = ""
     private var airportsOffset = 0
 
     private var isLoading = false
@@ -89,7 +89,7 @@ class FlightListPresenter(
         }
     }
 
-    override fun requestSchedules() {
+    private fun requestSchedules() {
         view.showLoading()
         view.clearAirports()
 

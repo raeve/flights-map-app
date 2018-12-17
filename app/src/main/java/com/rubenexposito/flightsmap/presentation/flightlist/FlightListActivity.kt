@@ -8,8 +8,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.Toast
 import com.rubenexposito.flightsmap.R
-import com.rubenexposito.flightsmap.data.common.hide
-import com.rubenexposito.flightsmap.data.common.show
+import com.rubenexposito.flightsmap.common.hide
+import com.rubenexposito.flightsmap.common.show
 import com.rubenexposito.flightsmap.domain.model.Airport
 import com.rubenexposito.flightsmap.domain.model.Schedule
 import dagger.android.AndroidInjection

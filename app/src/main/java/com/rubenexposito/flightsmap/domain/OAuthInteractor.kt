@@ -13,8 +13,8 @@ class OAuthInteractorImpl(
     private val sharedRepository: SharedRepository
 ) : OAuthInteractor {
 
-    override fun getAuthToken() = lufthansaRepository.oauthToken()
-        .map {
-            sharedRepository.saveToken(it.accessToken, it.tokenType, it.expiresIn)
-        }
+    override fun getAuthToken() = createSingle()
+
+    private fun createSingle() = lufthansaRepository.oauthToken()
+        .map { sharedRepository.saveToken(it.accessToken, it.tokenType, it.expiresIn) }
 }

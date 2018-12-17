@@ -1,0 +1,109 @@
+{
+  "AirportResource": {
+    "Airports": {
+      "Airport": {
+        "AirportCode": "ZRH",
+        "Position": {
+          "Coordinate": {
+            "Latitude": 47.4647,
+            "Longitude": 8.5492
+          }
+        },
+        "CityCode": "ZRH",
+        "CountryCode": "CH",
+        "LocationType": "Airport",
+        "Names": {
+          "Name": [
+            {
+              "@LanguageCode": "xx",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "de",
+              "$": "Zürich"
+            },
+            {
+              "@LanguageCode": "ru",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "ko",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "pt",
+              "$": "Zurique"
+            },
+            {
+              "@LanguageCode": "en",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "it",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "fr",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "es",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "ka",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "ja",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "mi",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "pl",
+              "$": "Zurich"
+            },
+            {
+              "@LanguageCode": "nl",
+              "$": "Zürich"
+            }
+          ]
+        },
+        "UtcOffset": 2,
+        "TimeZoneId": "Europe/Zurich"
+      }
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/references/airports/ZRH?limit=20&offset=260",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/references/cities/ZRH",
+          "@Rel": "related"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/references/countries/CH",
+          "@Rel": "related"
+        },
+        {
+          "@Href": "http://travelguide.lufthansa.com/de/de/zuerich/ZRH",
+          "@Rel": "alternate"
+        },
+        {
+          "@Href": "http://travelguide.lufthansa.com/de/en/zurich/ZRH",
+          "@Rel": "alternate"
+        },
+        {
+          "@Href": "http://travelguide.lufthansa.com/de/cn/zurich/ZRH",
+          "@Rel": "alternate"
+        }
+      ]
+    }
+  }
+}
