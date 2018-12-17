@@ -1,0 +1,954 @@
+{
+  "AirportResource": {
+    "Airports": {
+      "Airport": [
+        {
+          "AirportCode": "ABV",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 9.0067,
+              "Longitude": 7.2631
+            }
+          },
+          "CityCode": "ABV",
+          "CountryCode": "NG",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Abuja International"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Abuja International"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Abuja International"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Abuja International"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Abuja International"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Abuja International"
+              }
+            ]
+          },
+          "UtcOffset": 1,
+          "TimeZoneId": "Africa\/Lagos"
+        },
+        {
+          "AirportCode": "ABZ",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 57.2042,
+              "Longitude": -2.2003
+            }
+          },
+          "CityCode": "ABZ",
+          "CountryCode": "GB",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Aberdeen"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Aberdeen"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Aberdeen"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Aberdeen"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Aberdeen"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Aberdeen"
+              }
+            ]
+          },
+          "UtcOffset": 1,
+          "TimeZoneId": "Europe\/London"
+        },
+        {
+          "AirportCode": "ACC",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 5.605277778,
+              "Longitude": -0.166666667
+            }
+          },
+          "CityCode": "ACC",
+          "CountryCode": "GH",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Accra"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Accra"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Accra - Kotoka International"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Accra"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Accra"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Accra"
+              }
+            ]
+          },
+          "UtcOffset": 0,
+          "TimeZoneId": "Africa\/Accra"
+        },
+        {
+          "AirportCode": "ACE",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 28.9456,
+              "Longitude": -13.6053
+            }
+          },
+          "CityCode": "ACE",
+          "CountryCode": "ES",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Lanzarote"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Lanzarote"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Lanzarote"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Lanzarote"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Lanzarote"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Lanzarote"
+              }
+            ]
+          },
+          "UtcOffset": 1,
+          "TimeZoneId": "Atlantic\/Canary"
+        },
+        {
+          "AirportCode": "ADB",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 38.2925,
+              "Longitude": 27.1569
+            }
+          },
+          "CityCode": "IZM",
+          "CountryCode": "TR",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Izmir - Adnan Menderes"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Izmir - Adnan Menderes"
+              },
+              {
+                "@LanguageCode": "ja",
+                "$": "イズミール"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Izmir - Adnan Menderes"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Izmir - Adnan Menderes"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Izmir - Adnan Menderes"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Izmir - Adnan Menderes"
+              }
+            ]
+          },
+          "UtcOffset": 3,
+          "TimeZoneId": "Europe\/Istanbul"
+        },
+        {
+          "AirportCode": "ADD",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 8.9778,
+              "Longitude": 38.7994
+            }
+          },
+          "CityCode": "ADD",
+          "CountryCode": "ET",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Addis Abeba"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Addis Abeba"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Addis Ababa"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Addis Abeba"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Addis Abeba"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Addis Abeba"
+              }
+            ]
+          },
+          "UtcOffset": 3,
+          "TimeZoneId": "Africa\/Addis_Ababa"
+        },
+        {
+          "AirportCode": "AER",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 43.45,
+              "Longitude": 39.9567
+            }
+          },
+          "CityCode": "AER",
+          "CountryCode": "RU",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Sochi"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Sotschi"
+              },
+              {
+                "@LanguageCode": "ru",
+                "$": "Сочи"
+              },
+              {
+                "@LanguageCode": "ko",
+                "$": "소치"
+              },
+              {
+                "@LanguageCode": "ka",
+                "$": "索契"
+              },
+              {
+                "@LanguageCode": "ja",
+                "$": "ソチ"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Sochi"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Sochi"
+              },
+              {
+                "@LanguageCode": "mi",
+                "$": "索契"
+              },
+              {
+                "@LanguageCode": "pl",
+                "$": "Soczi"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Sochi"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Sochi"
+              }
+            ]
+          },
+          "UtcOffset": 3,
+          "TimeZoneId": "Europe\/Moscow"
+        },
+        {
+          "AirportCode": "AGP",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 36.675,
+              "Longitude": -4.4992
+            }
+          },
+          "CityCode": "AGP",
+          "CountryCode": "ES",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Malaga"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Malaga"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Malaga"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Malaga"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Malaga"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Malaga"
+              }
+            ]
+          },
+          "UtcOffset": 2,
+          "TimeZoneId": "Europe\/Madrid"
+        },
+        {
+          "AirportCode": "ALA",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 43.3533,
+              "Longitude": 77.0422
+            }
+          },
+          "CityCode": "ALA",
+          "CountryCode": "KZ",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Almaty"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Almaty"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Almaty"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Alma-Ata"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Almaty"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Almaty"
+              }
+            ]
+          },
+          "UtcOffset": 6,
+          "TimeZoneId": "Asia\/Qyzylorda"
+        },
+        {
+          "AirportCode": "ALG",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 36.6942,
+              "Longitude": 3.2147
+            }
+          },
+          "CityCode": "ALG",
+          "CountryCode": "DZ",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Algiers"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Algier"
+              },
+              {
+                "@LanguageCode": "pt",
+                "$": "Argel"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Algiers"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Algiers"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Alger"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Algiers"
+              }
+            ]
+          },
+          "UtcOffset": 1,
+          "TimeZoneId": "Africa\/Algiers"
+        },
+        {
+          "AirportCode": "AMM",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 31.7225,
+              "Longitude": 35.9933
+            }
+          },
+          "CityCode": "AMM",
+          "CountryCode": "JO",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Amman - Queen Alia International"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Amman - Queen Alia International"
+              },
+              {
+                "@LanguageCode": "pt",
+                "$": "Amã"
+              },
+              {
+                "@LanguageCode": "ja",
+                "$": "アンマン"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Amman - Queen Alia International"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Amman - Queen Alia International"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Amman - Queen Alia International"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Amman - Queen Alia International"
+              }
+            ]
+          },
+          "UtcOffset": 3,
+          "TimeZoneId": "Asia\/Amman"
+        },
+        {
+          "AirportCode": "AMS",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 52.3081,
+              "Longitude": 4.7642
+            }
+          },
+          "CityCode": "AMS",
+          "CountryCode": "NL",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Amsterdam - Schiphol"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Amsterdam - Schiphol"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Amsterdam - Schiphol"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Amsterdam - Schiphol"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Amsterdam - Schiphol"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Amsterdam - Schiphol"
+              }
+            ]
+          },
+          "UtcOffset": 2,
+          "TimeZoneId": "Europe\/Amsterdam"
+        },
+        {
+          "AirportCode": "AOI",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 43.6167,
+              "Longitude": 13.3603
+            }
+          },
+          "CityCode": "AOI",
+          "CountryCode": "IT",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Ancona"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Ancona"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Ancona"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Ancona"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Ancona"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Ancona"
+              }
+            ]
+          },
+          "UtcOffset": 2,
+          "TimeZoneId": "Europe\/Rome"
+        },
+        {
+          "AirportCode": "ARN",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 59.6519,
+              "Longitude": 17.9186
+            }
+          },
+          "CityCode": "STO",
+          "CountryCode": "SE",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Stockholm - Arlanda"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Stockholm - Arlanda"
+              },
+              {
+                "@LanguageCode": "pt",
+                "$": "Estocolmo"
+              },
+              {
+                "@LanguageCode": "ja",
+                "$": "ストックホルム"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Stockholm"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Stockholm - Arlanda"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Stockholm - Arlanda"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Estocolmo - Arlanda"
+              }
+            ]
+          },
+          "UtcOffset": 2,
+          "TimeZoneId": "Europe\/Stockholm"
+        },
+        {
+          "AirportCode": "ASB",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 37.9869,
+              "Longitude": 58.3608
+            }
+          },
+          "CityCode": "ASB",
+          "CountryCode": "TM",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Ashkhabad"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Ashgabad - S. Turkmenbashy Int'l"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Aschgabad"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Ashgabad"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Ashkhabad"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Ashkhabad"
+              }
+            ]
+          },
+          "UtcOffset": 5,
+          "TimeZoneId": "Asia\/Ashgabat"
+        },
+        {
+          "AirportCode": "ASM",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 15.2919,
+              "Longitude": 38.9106
+            }
+          },
+          "CityCode": "ASM",
+          "CountryCode": "ER",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Asmara"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Asmara"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Asmara"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Asmara"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Asmara"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Asmara"
+              }
+            ]
+          },
+          "UtcOffset": 3,
+          "TimeZoneId": "Africa\/Asmara"
+        },
+        {
+          "AirportCode": "ATH",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 37.9364,
+              "Longitude": 23.9444
+            }
+          },
+          "CityCode": "ATH",
+          "CountryCode": "GR",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Athens Eleftherios Venizelos"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Athens Eleftherios Venizelos"
+              },
+              {
+                "@LanguageCode": "pt",
+                "$": "Atenas"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Athens Eleftherios Venizelos"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Athens Eleftherios Venizelos"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Athens Eleftherios Venizelos"
+              },
+              {
+                "@LanguageCode": "nl",
+                "$": "Athene Eleftherios Venizelos"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Athens Eleftherios Venizelos"
+              }
+            ]
+          },
+          "UtcOffset": 3,
+          "TimeZoneId": "Europe\/Athens"
+        },
+        {
+          "AirportCode": "ATL",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 33.6367,
+              "Longitude": -84.4281
+            }
+          },
+          "CityCode": "ATL",
+          "CountryCode": "US",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Atlanta - Hartsfield"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Atlanta - Hartsfield, GO"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Hartsfield-Jackson Atlanta International Airport GA"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Atlanta - Hartsfield, GO"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Atlanta - Hartsfield, GO"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Atlanta - Hartsfield, GO"
+              }
+            ]
+          },
+          "UtcOffset": -4,
+          "TimeZoneId": "America\/New_York"
+        },
+        {
+          "AirportCode": "AUH",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 24.43305556,
+              "Longitude": 54.64888889
+            }
+          },
+          "CityCode": "AUH",
+          "CountryCode": "AE",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Abu Dhabi - International"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Abu Dhabi - International"
+              },
+              {
+                "@LanguageCode": "ru",
+                "$": "Абу-Даби"
+              },
+              {
+                "@LanguageCode": "ko",
+                "$": "아부다비"
+              },
+              {
+                "@LanguageCode": "ka",
+                "$": "阿布達比"
+              },
+              {
+                "@LanguageCode": "ja",
+                "$": "アブダビ"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Abu Dhabi - NADIA International"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Abu Dhabi - International"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Abu Dhabi - International"
+              },
+              {
+                "@LanguageCode": "mi",
+                "$": "阿布扎比"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Abu Dhabi - International"
+              }
+            ]
+          },
+          "UtcOffset": 4,
+          "TimeZoneId": "Asia\/Dubai"
+        },
+        {
+          "AirportCode": "AYT",
+          "Position": {
+            "Coordinate": {
+              "Latitude": 36.8986,
+              "Longitude": 30.8006
+            }
+          },
+          "CityCode": "AYT",
+          "CountryCode": "TR",
+          "LocationType": "Airport",
+          "Names": {
+            "Name": [
+              {
+                "@LanguageCode": "xx",
+                "$": "Antalya"
+              },
+              {
+                "@LanguageCode": "de",
+                "$": "Antalya"
+              },
+              {
+                "@LanguageCode": "ja",
+                "$": "アンタルヤ"
+              },
+              {
+                "@LanguageCode": "en",
+                "$": "Antalya"
+              },
+              {
+                "@LanguageCode": "it",
+                "$": "Antalya"
+              },
+              {
+                "@LanguageCode": "fr",
+                "$": "Antalya"
+              },
+              {
+                "@LanguageCode": "es",
+                "$": "Antalya"
+              }
+            ]
+          },
+          "UtcOffset": 3,
+          "TimeZoneId": "Europe\/Istanbul"
+        }
+      ]
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https:\/\/api.lufthansa.com\/v1\/references\/airports\/?limit=20&LHoperated=1&offset=0",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https:\/\/api.lufthansa.com\/v1\/references\/airports\/?limit=20&LHoperated=1&offset=20",
+          "@Rel": "next"
+        },
+        {
+          "@Href": "https:\/\/api.lufthansa.com\/v1\/references\/airports\/?limit=20&LHoperated=1&offset=220",
+          "@Rel": "last"
+        },
+        {
+          "@Href": "https:\/\/api.lufthansa.com\/v1\/references\/cities\/{cityCode}",
+          "@Rel": "related"
+        },
+        {
+          "@Href": "https:\/\/api.lufthansa.com\/v1\/references\/countries\/{countryCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 230
+    }
+  }
+}
