@@ -9,8 +9,3 @@ build/
 local.properties
 
 *.iml
-
-app/src/main/java/com/rubenexposito/flightsmap/data/network/NetworkConfig.kt
-/app/src/debug/res/values/google_maps_key.xml
-/app/src/main/res/values/google_maps_key.xml
-app/src/test/resources/oauth_token.json
